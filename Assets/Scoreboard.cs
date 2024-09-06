@@ -1,20 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Scoreboard : MonoBehaviour
 {
     public static int score = 0;
-    public TextMesh textDisplay = new TextMesh();
+
+    public TMP_Text scoreText;
+
     // Start is called before the first frame update
     void Start()
     {
-        textDisplay.text = "Score: 0";
+        scoreText.text = "0";
     }
 
     // Update is called once per frame
     void Update()
     {
-        textDisplay.text = "Score: " + score;
+        //scoreText.text = score.ToString();
     }
 }
